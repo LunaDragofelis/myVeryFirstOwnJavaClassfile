@@ -1,0 +1,80 @@
+Classfile /C:/Users/Luna/eclipse-workspace/ChausieLisp Proto 1/myClassfile.class
+  Last modified 01.07.2021; size 330 bytes
+  SHA-256 checksum 27cfafaa5734cb0e43d1120c15a57be124b265c48bc53e360ff7037af3b8bc91
+public class demo.Demo
+  minor version: 0
+  major version: 58
+  flags: (0x0001) ACC_PUBLIC
+  this_class: #14                         // demo/Demo
+  super_class: #15                        // java/lang/Object
+  interfaces: 0, fields: 1, methods: 3, attributes: 0
+Constant pool:
+   #1 = Utf8               demo/Demo
+   #2 = Utf8               java/lang/Object
+   #3 = Utf8               ()V
+   #4 = Utf8               <init>
+   #5 = Utf8               I
+   #6 = Utf8               demoInt
+   #7 = Utf8               (I)V
+   #8 = Utf8               (I)I
+   #9 = Utf8               add
+  #10 = Utf8               Code
+  #11 = Utf8               StackMapTable
+  #12 = Utf8               test
+  #13 = Utf8               (II)I
+  #14 = Class              #1             // demo/Demo
+  #15 = Class              #2             // java/lang/Object
+  #16 = Fieldref           #14.#21        // demo/Demo.demoInt:I
+  #17 = Methodref          #15.#20        // java/lang/Object."<init>":()V
+  #18 = Methodref          #14.#22        // demo/Demo."<init>":(I)V
+  #19 = Methodref          #14.#23        // demo/Demo.add:(I)I
+  #20 = NameAndType        #4:#3          // "<init>":()V
+  #21 = NameAndType        #6:#5          // demoInt:I
+  #22 = NameAndType        #4:#7          // "<init>":(I)V
+  #23 = NameAndType        #9:#8          // add:(I)I
+{
+  public int demoInt;
+    descriptor: I
+    flags: (0x0001) ACC_PUBLIC
+
+  public demo.Demo(int);
+    descriptor: (I)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_0
+         1: invokespecial #17                 // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iload_1
+         6: putfield      #16                 // Field demoInt:I
+         9: return
+      StackMapTable: number_of_entries = 0
+
+  public int add(int);
+    descriptor: (I)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_0
+         1: getfield      #16                 // Field demoInt:I
+         4: iload_1
+         5: iadd
+         6: ireturn
+      StackMapTable: number_of_entries = 0
+
+  public static int test(int, int);
+    descriptor: (II)I
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=4, args_size=2
+         0: new           #14                 // class demo/Demo
+         3: dup
+         4: iload_0
+         5: invokespecial #18                 // Method "<init>":(I)V
+         8: astore_2
+         9: aload_2
+        10: iload_1
+        11: invokevirtual #19                 // Method add:(I)I
+        14: ireturn
+      StackMapTable: number_of_entries = 0
+}
